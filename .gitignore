@@ -1,4 +1,5 @@
 !/.gitignore
 !/.terraform.lock.hcl
 !/.git
+.terraform
 
