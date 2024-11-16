@@ -1,6 +1,6 @@
 resource "aws_key_pair" "deployer" {
-  key_name   = "terra-automate-key"
-  public_key = file("terra-key.pub")
+  key_name   = "terra-pract-key"
+  public_key = file("terra-pract-2.pub")
 }
 
 resource "aws_default_vpc" "default" {
@@ -48,13 +48,13 @@ resource "aws_security_group" "allow_user_to_connect" {
   }
 }
 
-resource "aws_instance" "testinstance" {
+resource "aws_instance" "testinstance2" {
   ami             = var.ami_id
   instance_type   = var.instance_type
   key_name        = aws_key_pair.deployer.key_name
   security_groups = [aws_security_group.allow_user_to_connect.name]
   tags = {
-    Name = "Terra-Automate"
+    Name = "Terra-Automate-2"
   }
   root_block_device {
     volume_size = 10 
