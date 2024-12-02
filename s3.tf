@@ -1,6 +1,6 @@
-resource "aws_s3_bucket" "testbucket5" {
-    bucket = "${var.my_enviroment}-test-my-app-bucket-b-1"
+resource "aws_s3_bucket" "mytestbucket-21" {
+    bucket = "${var.my_enviroment}-test-my-app-bucket-b-2"
     tags = {
-            Name = "${var.my_enviroment}-test-my-app-bucket-b-1"
+            Name = "${var.my_enviroment}-test-my-app-bucket-b-2"
         }
 }

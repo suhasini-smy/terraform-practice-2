@@ -18,4 +18,10 @@ variable "my_enviroment" {
   default     = "dev"
 }
 
+variable "dynamo_table_name" {
+  type = string 
+  default ="tws-free-bootcamp-table"
+  description = "This is table name for Dyanamodb"
+}
+
 
